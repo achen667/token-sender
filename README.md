@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TokenSender  
 
-## Getting Started
+A simple and elegant token airdrop dApp that allows you to send ERC-20 tokens to multiple addresses at once using a smart contract. Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Wagmi**, **RainbowKit**, and **ViEM**.
 
-First, run the development server:
+---
+
+## Features
+
+- ✅ Connect your wallet (via RainbowKit)
+- ✅ Input a token address to auto-fetch token name
+- ✅ Paste recipients and amounts (comma or newline-separated)
+- ✅ Automatically checks allowance and approves if necessary
+- ✅ Displays token name, amount in wei and in human-readable format
+- ✅ Beautiful UI with TailwindCSS and responsive layout
+- ✅ Persists form inputs in `localStorage`
+- ✅ Loading spinner during transaction
+
+---
+
+##  Tech Stack
+
+- **Next.js 14+**
+- **TypeScript**
+- **TailwindCSS**
+- **RainbowKit** (for wallet connect)
+- **Wagmi v2**
+- **ViEM** (internal usage via Wagmi/core)
+- **ethers** (underlying provider for contract reads/writes)
+
+---
+
+##  Getting Started
+
+### 1. Clone the repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/achen667/token-sender.git
+cd token-sender
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Make sure you have pnpm installed:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+pnpm install
 
-## Learn More
+3. Configure environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a .env.local file in the root directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+touch .env.local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Add your WalletConnect Project ID:
 
-## Deploy on Vercel
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_project_id_here
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Run the development server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+pnpm run dev
+
+Visit: http://localhost:3000
+
+Usage Instructions
+
+    Connect your wallet.
+
+    Paste in:
+
+        Token Address: ERC20 address
+
+        Recipients: List of addresses (comma- or newline-separated)
+
+        Amounts: Token amounts matching recipients
+
+    The UI will:
+
+        Auto-fetch token name
+
+        Show total tokens (in wei and formatted)
+
+        Check allowance & auto-approve if needed
+
+    Click Send Tokens – spinner shows progress
+
+ Project Structure
+
+.
+├── components/
+│   └── ui/
+│       └── InputField.tsx      // Reusable input component
+├── pages/
+│   └── index.tsx               // Main token sending form
+├── constants/
+│   └── index.ts                // ABIs and chain config
+├── util/
+│   └── calculateTotal.ts       // Utility to sum token amounts
+├── public/
+├── .env.local
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
+
+ License
+
+MIT
+ Acknowledgements
+
+    Wagmi(https://wagmi.sh/)
+
+    RainbowKit(https://rainbowkit.com/)
+
+    ViEM(https://viem.sh/)
+
+    TailwindCSS(https://tailwindcss.com/)
