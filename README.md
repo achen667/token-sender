@@ -173,12 +173,4 @@ Click  Send  Tokens  –  spinner  shows  progress
 └──  package.json
 
   
-
-License
-MIT
-
-Acknowledgements
-Wagmi(https://wagmi.sh/)
-RainbowKit(https://rainbowkit.com/)
-ViEM(https://viem.sh/)
-TailwindCSS(https://tailwindcss.com/)
+ 
