@@ -15,21 +15,21 @@ A simple and elegant token airdrop dApp that allows you to send ERC-20 tokens to
 
   
 
-- ✅ Connect your wallet (via RainbowKit)
+- Connect your wallet (via RainbowKit)
 
-- ✅ Input a token address to auto-fetch token name
+- Input a token address to auto-fetch token name
 
-- ✅ Paste recipients and amounts (comma or newline-separated)
+- Paste recipients and amounts (comma or newline-separated)
 
-- ✅ Automatically checks allowance and approves if necessary
+- Automatically checks allowance and approves if necessary
 
-- ✅ Displays token name, amount in wei and in human-readable format
+- Displays token name, amount in wei and in human-readable format
 
-- ✅ Beautiful UI with TailwindCSS and responsive layout
+- Beautiful UI with TailwindCSS and responsive layout
 
-- ✅ Persists form inputs in `localStorage`
+- Persists form inputs in `localStorage`
 
-- ✅ Loading spinner during transaction
+- Loading spinner during transaction
 
   
 
@@ -142,8 +142,7 @@ Click  Send  Tokens  –  spinner  shows  progress
 
   
 
-Project  Structure
-.
+## Project  Structure
 
 ├──  components/
 
