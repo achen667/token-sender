@@ -1,113 +1,185 @@
-# TokenSender  
+
+#  TokenSender
+
+  
 
 A simple and elegant token airdrop dApp that allows you to send ERC-20 tokens to multiple addresses at once using a smart contract. Built with **Next.js**, **TypeScript**, **TailwindCSS**, **Wagmi**, **RainbowKit**, and **ViEM**.
 
+  
+
 ---
 
-## Features
+  
+
+##  Features
+
+  
 
 - ✅ Connect your wallet (via RainbowKit)
+
 - ✅ Input a token address to auto-fetch token name
+
 - ✅ Paste recipients and amounts (comma or newline-separated)
+
 - ✅ Automatically checks allowance and approves if necessary
+
 - ✅ Displays token name, amount in wei and in human-readable format
+
 - ✅ Beautiful UI with TailwindCSS and responsive layout
+
 - ✅ Persists form inputs in `localStorage`
+
 - ✅ Loading spinner during transaction
 
+  
+
 ---
+
+  
 
 ##  Tech Stack
 
-- **Next.js 14+**
-- **TypeScript**
-- **TailwindCSS**
-- **RainbowKit** (for wallet connect)
-- **Wagmi v2**
-- **ViEM** (internal usage via Wagmi/core)
-- **ethers** (underlying provider for contract reads/writes)
+  
+
+-  **Next.js 14+**
+
+-  **TypeScript**
+
+-  **TailwindCSS**
+
+-  **RainbowKit** (for wallet connect)
+
+-  **Wagmi v2**
+
+-  **ViEM** (internal usage via Wagmi/core)
+
+-  **ethers** (underlying provider for contract reads/writes)
+
+  
 
 ---
 
+  
+
 ##  Getting Started
 
-### 1. Clone the repo
+  
+
+###  1. Clone the repo
+
+  
 
 ```bash
-git clone https://github.com/achen667/token-sender.git
-cd token-sender
 
-2. Install dependencies
+git  clone  https://github.com/achen667/token-sender.git
 
-Make sure you have pnpm installed:
+cd  token-sender
+```
+  
 
-pnpm install
+###  2.  Install  dependencies
 
-3. Configure environment variables
+  
 
-Create a .env.local file in the root directory:
+Make  sure  you  have  pnpm  installed:
 
-touch .env.local
+  
+```bash
 
-Add your WalletConnect Project ID:
+pnpm  install
+```
+  
 
+###  3.  Configure  environment  variables
+
+  
+
+Create  a  .env.local  file  in  the  root  directory:
+
+  
+```bash
+touch  .env.local
+```
+  
+
+Add  your  WalletConnect  Project  ID:
+
+  
+```bash
 NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_project_id_here
+```
+  
 
-4. Run the development server
+###  4.  Run  the  development  server
 
-pnpm run dev
+  
+```bash
+pnpm  run  dev
+```
+  
 
-Visit: http://localhost:3000
+Visit:  http://localhost:3000
 
-Usage Instructions
+  
 
-    Connect your wallet.
+Usage  Instructions
 
-    Paste in:
+  
 
-        Token Address: ERC20 address
+Connect  your  wallet.
 
-        Recipients: List of addresses (comma- or newline-separated)
+Paste  in:
+Token  Address:  ERC20  address
+Recipients:  List  of  addresses (comma- or  newline-separated)
+Amounts:  Token  amounts  matching  recipients
 
-        Amounts: Token amounts matching recipients
 
-    The UI will:
+The  UI  will:
+Auto-fetch  token  name
+Show  total  tokens (in wei  and  formatted)
+Check  allowance  &  auto-approve  if  needed
+Click  Send  Tokens  –  spinner  shows  progress
 
-        Auto-fetch token name
+  
 
-        Show total tokens (in wei and formatted)
-
-        Check allowance & auto-approve if needed
-
-    Click Send Tokens – spinner shows progress
-
- Project Structure
-
+Project  Structure
 .
-├── components/
-│   └── ui/
-│       └── InputField.tsx      // Reusable input component
-├── pages/
-│   └── index.tsx               // Main token sending form
-├── constants/
-│   └── index.ts                // ABIs and chain config
-├── util/
-│   └── calculateTotal.ts       // Utility to sum token amounts
-├── public/
-├── .env.local
-├── tailwind.config.js
-├── tsconfig.json
-└── package.json
 
- License
+├──  components/
 
+│  └──  ui/
+
+│  └──  InputField.tsx  //  Reusable  input  component
+
+├──  pages/
+
+│  └──  index.tsx  //  Main  token  sending  form
+
+├──  constants/
+
+│  └──  index.ts  //  ABIs  and  chain  config
+
+├──  util/
+
+│  └──  calculateTotal.ts  //  Utility  to  sum  token  amounts
+
+├──  public/
+
+├──  .env.local
+
+├──  tailwind.config.js
+
+├──  tsconfig.json
+
+└──  package.json
+
+  
+
+License
 MIT
- Acknowledgements
 
-    Wagmi(https://wagmi.sh/)
-
-    RainbowKit(https://rainbowkit.com/)
-
-    ViEM(https://viem.sh/)
-
-    TailwindCSS(https://tailwindcss.com/)
+Acknowledgements
+Wagmi(https://wagmi.sh/)
+RainbowKit(https://rainbowkit.com/)
+ViEM(https://viem.sh/)
+TailwindCSS(https://tailwindcss.com/)
