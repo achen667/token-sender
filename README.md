@@ -63,7 +63,7 @@ A simple and elegant token airdrop dApp that allows you to send ERC-20 tokens to
 
 ##  Getting Started
 
-[IPFS site](https://ipfs.io/ipfs/QmZzXo7DT2B92b3M6vhapjN8ssTWft2jsw2eE8fQ1o3oSJ/)
+[IPFS site](https://ipfs.io/ipfs/bafybeig2nl2subc5s3ttfz7522xx4vnzod7pkmi7qzfhj6lt3aks5rkwjq/)
 
 
 ###  1. Clone the repo
